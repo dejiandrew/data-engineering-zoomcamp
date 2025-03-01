@@ -1,0 +1,9 @@
+CREATE EXTERNAL TABLE `de-zoomcamp-module-4.module4_all_trips_dataset.yellow_tripdata`
+OPTIONS (
+  format = 'CSV',
+  uris = ['gs://zoomcamp-module-4-terra-bucket-022625/yellow/*.csv.gz'],
+  skip_leading_rows = 1,  -- Skip the header row if it exists
+  field_delimiter = ',',  -- Set the delimiter for CSV files
+  compression = 'GZIP'    -- Specify that the files are compressed using GZIP
+);
+
